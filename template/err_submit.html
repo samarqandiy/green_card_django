@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %}
+Anketa
+{% endblock title %}
+<!--  -->
+{% block content %}
+<div class="container-fluid">
+    
+    <table class="err-submited-datas">
+        <tr>
+            <h1 class="err-table-title">Anketa avvalroq kiritilgan</h1>
+        </tr>
+        <tr>
+            <td>Ism: </td>
+            <td>{{ fname }}</td>
+        </tr>
+        <tr>
+            <td>Familiya: </td>
+            <td>{{ lname }}</td>
+        </tr>
+        <tr>
+            <td>Yashash joyi: </td>
+            <td>{{ address }}</td>
+        </tr>
+    </table>
+    {% if members %}
+    
+    <table class="submited-datas">
+        <tr>
+            <h2 colspan="2" class="err-table-title">Oila azo(lar)i:</h2>
+        </tr>
+        {% for member in members %}
+        <tr>
+            <td> {{ member.3 }} -- 
+                 {{ member.4 }} -- 
+                 {{ member.8 }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+<!-- 
+    {% if payed %}
+        <p class="text-success">To'lov amalga oshirilgan</p>
+    {% else %}
+        <p class="text-danger btn text-a-c d-bloc">To'lov amalga oshirilmagan | Agar to'lov qilinmasa anketa malumotlar bazasidan o'chiriladi</p>
+        <a href="#" target="_blank" rel="noopener noreferrer" style="width: 120px; margin:auto;" class="btn btn-success d-bloc"> To'lash </a>
+    {% endif %}
+
+     -->
+</div>
+{% endblock content %}

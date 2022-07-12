@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %}
+Anketa
+{% endblock title %}
+<!--  -->
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container">
+<br>
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="{{anketa.photo.url}}" width="170" alt="User image">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">{{anketa.fname}} {{anketa.lname}}</h5>
+            <p class="card-text">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Jinsi:
+                        {% if anketa.gender %} Erkak {% else %} Ayol {% endif %}
+                    </li>
+                    <li class="list-group-item">Tug'ilgan sana: {{anketa.birth_date}}</li>
+                    <li class="list-group-item">Manzil: {{anketa.address}}</li>
+                    <li class="list-group-item">Passport: </li>
+                    <li class="list-group-item">Passport amal qilish muddati: {{ anketa.pass_end_date }}</li>
+                    <li class="list-group-item">Talim darajasi: {{ anketa.edu_grade }}</li>
+                    <li class="list-group-item">Oilaviy axvoli: {{ anketa.fam_state }}</li>
+                    <li class="list-group-item">Tel: <a href="tel:{{ anketa.phone }}">{{ anketa.phone }}</a></li>
+                    <a href="{{anketa.photo.url}}" class="btn btn-success" download="member{{member.id}}" target="_blank" rel="noopener noreferrer">Surratni yuklash</a>
+                </ul>
+            </p>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="card-group">
+    <div class="card">
+        {% if not anketa.is_personal %}
+        {% for member in anketa.members.all %}
+        <img src="{{member.photo.url}}" class="card-img-top" alt="{{member.photo.url}}">
+        <div class="card-body">
+            <h5 class="card-title">{{member.fname}} | {{member.lname}}</h5>
+            <p class="card-text">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Aloqadorligi:
+                        {% if member.gender and member.name == 'child' %}
+                            O'g'li
+                        {% elif member.gender == False and member.name == 'child' %}
+                            Qizi
+                        {% elif member.gender and member.name == 'merrige' %}
+                            Eri
+                        {% elif member.gender == False and member.name == 'merrige' %}
+                            Xotini
+                        {% else %}
+                        {{member.name}}
+                        {% endif %}
+                        </li>
+                    <li class="list-group-item">Jinsi:
+                        {% if member.gender %} Erkak {% else %} Ayol {% endif %}
+                    </li>
+                    <li class="list-group-item">Tug'ilgan sana: {{member.birth_date}}</li>
+                    <li class="list-group-item">Manzil: {{member.address}}</li>
+                    <a href="{{member.photo.url}}" class="btn btn-success" download="member{{member.id}}" target="_blank" rel="noopener noreferrer">Surratni yuklash</a>
+               </ul>
+            </p>
+        </div>
+        </div>
+        <div class="card">
+
+        {% endfor %}
+        {% endif %} <br>
+        <a class="btn btn-danger" href="{% url 'anketa_delete' anketa.pk %}" style="margin: 0 20px;">O'chirish</a><br>
+        <a class="btn btn-secondary" href="{% url 'anketa_list' %}" style="margin: 0 20px;">Ortga</a>
+</div>
+<br>
+<br>
+</div>
+
+{% else %}
+<h1 class="text-danger">!Xato manzilga kirdingiz <a href="{% url 'home' %}" class="link">bosh sahif</a>aga qayting </h1>
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,1 @@
+from .misk import random_code

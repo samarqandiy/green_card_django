@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="real">
+        <form action="/test1/" method="POST">{% csrf_token %}
+
+            <input type="checkbox" checked hidden name="personal" id="personal" value="True">
+            <input type="checkbox" checked hidden name="has_mer" id="has_mer" value="False">
+            <input type="checkbox" checked hidden name="member_count" id="memberCount" value="0">
+
+
+            <h5 class="text-info">21 yoshdan oshmagan farzand(lar)ingiz va turmush o'rtog'ingiz xaqida malumot kiriting
+                ( agar mavjud bo'lsa )</h5>
+            <div style="display: none;" id="photoRule" class="box">
+                <p class="text-info">Yoshbolalar uchun shablonlar: surat 5x5 o'lchamda bo'lishi kerak</p>
+                <img src="https://greencard-new-tech.netlify.app/src/images/img_templates/baby_false_dnt_look.png"
+                    alt="baby fals" height="180">
+                <img src="https://greencard-new-tech.netlify.app/src/images/img_templates/baby_false_wth_toy.png"
+                    alt="baby fals" height="180">
+                <img src="https://greencard-new-tech.netlify.app/src/images/img_templates/baby_true.png" alt="baby fals"
+                    height="180">
+            </div>
+            <div id="memberList" class="box">
+
+            </div>
+            <button id="submit" class="btn btn-success d-bloc" hidden>Tayyor (yuborish)</button>
+    </div>
+    <br>
+</div>
+</form>
+<button class="btn btn-outline-info d-bloc" onclick="addMember()"> + Farzand qo'shish</button>
+<br>
+<label for="submit" class="btn btn-success d-bloc" style="width: 120px; margin:auto;">yuborish</label>
+<br>
+</div>
+</div>
+{{ member1 }}
+<script src="https://greencard-new-tech.netlify.app/js/app.js"></script>
+</div>

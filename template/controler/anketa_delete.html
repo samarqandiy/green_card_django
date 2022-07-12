@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %}
+Anketa
+{% endblock title %}
+<!--  -->
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container">
+    <br><br>
+    <h5 class="title text-danger">
+        {{anketa.fname}} {{anketa.lname}} nomiga to'ldirilgan {% if not anketa.is_personal %} oilaviy {% else %} Shaxsiy {% endif %} anketani o'chirishga ishonchingiz komilmi ?
+     </h5>
+    <br>
+    <form method="post" style="display: inline">{% csrf_token %}
+    <button class="btn btn-danger" type="submit" style="margin: 0 20px;">O'chirish</button>
+    </form>
+    <a class="btn btn-info" href="{% url 'anketa_detail' anketa.pk %}" style="margin: 0 20px;">Detallar</a>
+</div>
+<br>
+
+{% else %}
+<h1 class="text-danger">!Xato manzilga kirdingiz <a href="{% url 'home' %}" class="link">bosh sahif</a>aga qayting </h1>
+{% endif %}
+
+{% endblock content %}
