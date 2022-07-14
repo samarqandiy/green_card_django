@@ -6,12 +6,15 @@ cement==2.8.2
 certifi==2022.6.15
 charset-normalizer==2.0.12
 colorama==0.4.3
+dj-database-url==0.5.0
 Django==4.0.5
 django-storages==1.12.3
 future==0.16.0
+gunicorn==20.1.0
 idna==3.3
 jmespath==0.10.0
 pathspec==0.9.0
+psycopg2==2.9.3
 pypiwin32==223
 python-dateutil==2.8.2
 pywin32==304
@@ -25,3 +28,4 @@ termcolor==1.1.0
 tzdata==2022.1
 urllib3==1.26.10
 wcwidth==0.1.9
+whitenoise==6.2.0
