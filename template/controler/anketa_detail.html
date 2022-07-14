@@ -24,7 +24,7 @@ Anketa
                     </li>
                     <li class="list-group-item">Tug'ilgan sana: {{anketa.birth_date}}</li>
                     <li class="list-group-item">Manzil: {{anketa.address}}</li>
-                    <li class="list-group-item">Passport: </li>
+                    <li class="list-group-item">Passport: {{anketa.pass_data}}</li>
                     <li class="list-group-item">Passport amal qilish muddati: {{ anketa.pass_end_date }}</li>
                     <li class="list-group-item">Talim darajasi: {{ anketa.edu_grade }}</li>
                     <li class="list-group-item">Oilaviy axvoli: {{ anketa.fam_state }}</li>
@@ -76,9 +76,10 @@ Anketa
         {% endif %} <br>
         <a class="btn btn-danger" href="{% url 'anketa_delete' anketa.pk %}" style="margin: 0 20px;">O'chirish</a><br>
         <a class="btn btn-secondary" href="{% url 'anketa_list' %}" style="margin: 0 20px;">Ortga</a>
+<br>
+<br>
 </div>
-<br>
-<br>
+</div>
 </div>
 
 {% else %}
