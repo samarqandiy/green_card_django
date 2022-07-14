@@ -9,6 +9,14 @@ def home(request):
     return render(request, 'index.html', context)
 
 
+def service(request):
+    context = {'title': "Xizmatlar"}
+    return render(request, 'services.html', context)
+
+def about(request):
+    context = {'title': "Malumotlar"}
+    return render(request, 'about.html', context)
+
 def anketa(request):
     context = {'title': "Anketa"}
     return render(request, 'anketa.html', context)

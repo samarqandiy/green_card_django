@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %}
+{{ title }}
+{% endblock title %}
+<!--  -->
+{% block content %}
+<div class="container-fluid">
+
+<header class="header">
+    <div class="header-title">
+        <h1>Bizning hizmatlar <span>bilan tanishing!</span></h1>
+    </div>
+    <div class="service-info">
+        <div class="item"><a href="#aviakassa"><h2>Aviakassa</h2><i class='bx bxs-plane-alt'></i></a></div>
+        <div class="item"><a href="#sim-karta"><h2>Sim kartalar</h2> <i class='bx bxs-memory-card'></i></a></div>
+        <div class="item"><a href="#paynet"><h2>Paynet</h2><i class='bx bxs-coin'></i></a></div>
+        <div class="item"><a href="#avto-sugurta"><h2>Autosugurta</h2><i class='bx bxs-car-garage'></i></a></a><div>
+        <!-- <div class="item end-item "><h2>Kompuyuter xizmatlar</h2><i class='bx bxs-slideshow'></i></div> -->
+    </div>
+</header>
+
+<section class="services-about">
+    <div class="aviakassa" id="aviakassa">
+        <div class="aviakassa-title"><h1>Dunyoning xohlagan nuqtasiga  aviachiptalar</h1></div>
+        <div class="covid-test"><h3>Covid uchun ham test qilib beramiz</h3> <p>bir kishi uchun 99000 so'm</p></div>
+    </div>
+</section>
+
+<h1 style="text-align: center; color: aqua;">Sim karta</h1>
+
+<section class="sim-karta" id="sim-karta">
+    <div class="cards">
+        <div class="card">
+            <img src="https://greencard-new-tech.netlify.app/src/sericeimgs/mobi.png" alt="">
+         </div>
+         <div class="card">
+             <img src="https://greencard-new-tech.netlify.app/src/sericeimgs/uzmobile.png" alt="">
+          </div>
+
+          <div class="card">
+             <img src="https://greencard-new-tech.netlify.app/src/sericeimgs/beeline.png" alt="">
+          </div>
+    </div>
+    <h3 class="sim-years">18 yoshdan oshgan fuqorolarga passport orqali beriladi </h3>
+    <div class="price"><h3>Sim karta narxi 4990so'm</h3></div>
+</section>
+
+<h1 style="text-align: center; color: aqua;">Paynet</h1>
+
+<section class="paynet" id="paynet">
+    <div class="pay-title"><h1>Tez va oson to'lov</h1></div>
+    <div class="pay-service-price">
+        <div class="narx narx1"><h2>1000 so'm ~ 5000 so'm </h2> <span>--</span> </div>
+        <div class="narx narx2"><h2>5000 so'm ~ 50 000 so'm </h2> <span>990so'm</span></div>
+        <div class="narx narx3"><h2>50 000 so'm ~ 100 000 so'm </h2> <span>1 990 so'm</span> </div>
+        <div class="narx narx4"><h2>100 000 so'm + </h2> <span>2990 so'm</span></div>
+    </div>
+</section>
+<h1 style="text-align: center; color: aqua;">Auto sugurta</h1>
+<section class="avto-sugurta" id="avto-sugurta">
+    <div class="sugurta-title">
+        <h1>Biz bilan avto mashinagizni 1 yilga sugurta qiling</h1>
+    </div>
+    <h2>Kerakli xujjatlar</h2>
+    <div class="necessary-documents">
+        <div class="item item-1"><img src="https://greencard-new-tech.netlify.app/src/sericeimgs/sugurta/prava.jfif" alt="prava" title="prava"><h3>Xaydovchilik <br> guvohnomasi</h3></div>
+        <div class="item item-2"><img src="https://greencard-new-tech.netlify.app/src/sericeimgs/sugurta/tex-pas.jfif" alt="tex-passport" title="tex-passport"><h3>Avtomabile Texnik <br> passport</h3></div>
+    </div>
+    <div class="cars">
+        <div class="y-car"><img src="https://greencard-new-tech.netlify.app/src/sericeimgs/sugurta/yengil-mash.png" alt=""> <p>39 900 so'm</p> </div>
+        <div class="o-car"><img src="https://greencard-new-tech.netlify.app/src/sericeimgs/sugurta/yuk-mash.jfif" alt=""> <p>79 990 so'm</p> </div>
+    </div>
+</section>
+
+</div>
+{% endblock content %}

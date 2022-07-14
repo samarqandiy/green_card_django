@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %}
+{{ title }}
+{% endblock title %}
+<!--  -->
+{% block content %}
+<div class="container-fluid">
+
+<header class="about-header" style="background: none;">
+<div class="about-title">
+    <br>
+    <h2 class="text-success"><b>Green Card nima?</b></h2><br>
+    <p>
+        Green Card Lotereyasi — AQSh hukumati tomonidan e'lon qilingan "DV Lottery" dasturi har yili dunyoning ko'plab mamlakatlaridan minglab odamlarga AQShga kelib yashash orzusini ro'yobga chiqarish imkoniyatini beradi. Siz ham buni qo'ldan boy bermay <a href="{% url 'anketa'%}"> anketa</a> to'ldiring !
+        <br>
+        <br>
+        Green Card dastur haqida ma'lumot: Kongress qarori bilan joriy etilgan “Turli millatlarga mansub
+        immigrantlar viza dasturi -DV” har yili Davlat Departamenti tomonidan boshqariladi. Immigratsiya va
+        Fuqarolik Aktining (IFA) 203(s) bo'limi Amerika Qo'shma Shtatlariga tarixan immigratsiya ko'rsatkichi past
+        davlatlardan bo'lgan “turli millatlarga mansub immigrantlar” deb ataluvchi immigrantlar sinfini joriy etadi.<br><br>
+        2021-soliq yilida 50 000 nafar “turli millatlarga mansub immigrantlar” (DV) vizalari mavjud bo'ladi.
+        Dasturda tanlab olinganlar (saralanganlar) “turli millatlarga mansub immigrantlar” vizalarini olishga
+        muvofiq bo'lishlari uchun dasturning oddiy, lekin qat'iy talablariga muvofiq bo'lishlari shart. Davlat
+        Departamenti saralanganlarni kompyuterlashtirilgan tasodifiy lotereya tanlovi orqali aniqlaydi. Vizalar olti
+        jo'g'rofiy mintaqalar orasida taqsimlanadi, va hech qaysi bir davlatga bir yil ichida DV vizalarining yetti
+        foizidan ortig'i berilmaydi.<br><br>
+    </p>
+    </div>
+</header>
+<br>
+<br>
+</div>
+{% endblock content %}

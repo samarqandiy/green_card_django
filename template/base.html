@@ -14,47 +14,60 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	
     <link rel="stylesheet" href="https://greencard-new-tech.netlify.app/style/style.css">
-	<!-- <link rel="stylesheet" href="https://greencard-new-tech.netlify.app/src/bootstrap-4.0.0/style/bootstrap.min.css">
-    
-    
+	<!-- <link rel="stylesheet" href="https://greencard-new-tech.netlify.app/src/bootstrap-4.0.0/style/bootstrap.min.css">	
+
     <script src="https://greencard-new-tech.netlify.app/src/bootstrap-4.0.0/script/jquery-3.2.1.slim.min.js"></script>
     <script src="https://greencard-new-tech.netlify.app/src/bootstrap-4.0.0/script/popper.min.js"></script>
     <script src="https://greencard-new-tech.netlify.app/src/bootstrap-4.0.0/script/bootstrap.min.js"></script> -->
 
+	<!-- link box-icon -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="shortcut icon" href="https://greencard-new-tech.netlify.app/src/sericeimgs/favicon-icon/android-chrome-192x192.png" type="image/x-icon">
     <title>GC | {% block title %}{% endblock title %}</title>
 </head>
 <body>
     <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
-		<a class="navbar-brand" href="{% url 'home'%}">Green Card</a>
+		<a class="navbar-brand" href="{% url 'home'%}"><img src="https://greencard-new-tech.netlify.app/src/sericeimgs/logo-gor-removebg-preview.png" alt="Green Card" style="width: 60px;"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-        
+
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
 					<a class="nav-link" href="{% url 'home' %}">Asosiy<span class="sr-only"></span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'home'%}">Xizmatlar</a>
+					<a class="nav-link" href="{% url 'service'%}">Xizmatlar</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'home'%}">Malumotlar</a>
+					<a class="nav-link" href="{% url 'about'%}">Malumotlar</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{% url 'home'%}">Aloqa</a>
-				</li>
+				<!-- <li class="nav-item">
+					<a class="nav-link" href="{#{% url 'contact'%}#}">Aloqa</a>
+				</li> -->
 			</ul>
 			<li class="form-inline my-2 my-lg-0">
                 <a class="btn btn-success" href="{% url 'anketa'%}">Anketa to'ldirish</a>
 			</li>
 		</div>
 	</nav>
-		{% block content %}
+	{% block content %}
 
-		{% endblock content %}
+	{% endblock content %}
 
-
+<footer class="gbl-footer">
+	<div class="logo"><img src="https://greencard-new-tech.netlify.app/src/sericeimgs/logo-removebg-preview (1).png" alt=""></div>
+	<div class="footer-icons">
+	    <a href="https://t.me/+nTIajNrk9LFmZWQy"><i class='bx bxl-telegram'></i></a>
+	    <a href="#"><i class='bx bxl-instagram'></i></a>
+	    <a href="{% url 'home'%}"><i class='bx bxl-internet-explorer'></i></a>
+	</div>
+	<div class="footer-links-anket">
+	    <a class="btn btn-info" href="{% url 'anketa'%}">Anketa</a>
+	</div>
+	<div class="footer-sub-title"><p>Sizning xotirjamligingiz bizning kasbimiz!</p></div>
+</footer>
 <script src="https://greencard-new-tech.netlify.app/js/data.js"></script>
 <script src="https://greencard-new-tech.netlify.app/js/app.js"></script>
   </body>
