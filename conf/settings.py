@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from environs import ENV
+
+env = ENV()
+env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,10 +88,11 @@ WSGI_APPLICATION = 'conf.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'defoult': env.dj_db_url('SALOM')
+    # 'default': {
+    #     # 'ENGINE': 'django.db.backends.sqlite3',
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

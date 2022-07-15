@@ -11,6 +11,7 @@ whitenoise = "*"
 botocore = "*"
 boto3 = "*"
 psycopg2 = "*"
+environs = {version = "==8.0.0", extras = ["django"]}
 
 [dev-packages]
 
