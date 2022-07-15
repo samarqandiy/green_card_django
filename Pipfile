@@ -5,6 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
+django-storages = "*"
+gunicorn = "*"
+whitenoise = "*"
+botocore = "*"
+boto3 = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
