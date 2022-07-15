@@ -1,0 +1,156 @@
+*,
+*:before,
+*:after{
+    outline: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* style for date input */
+input[type="date"]{
+    background-color: #0080ff;
+    padding: 5px 27px;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="file"]{
+    color: #fff;
+    background-color: #0080ff;
+}
+
+select, input[type="text"].addres-input{
+    width: 300px;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"],
+input[type="date"],
+select{
+    padding: 5px 10px;
+    font-size: 16px;
+    overflow: hidden;
+    width: 200px;
+}
+
+select option{
+    padding: 20px;
+    font-size: 16px;
+}
+
+
+input,
+select {
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.2s;
+}
+
+input:focus,
+select:focus{
+    border: 1px solid #0080ff;
+    outline: 2px solid #0080ff;
+    box-shadow: 0 0 7px #0080ff,
+                0 0 10px #0080ff;
+    background-color: #ffffff;
+    color: #333;
+}
+
+input.date-yil{
+    width: 80px;
+}
+
+input.date-kun,
+input.date-oy{
+    width: 60px;
+}
+
+
+
+
+
+/* need to delet */
+
+
+.form-section{
+    width: 50%;
+    display: inline-block;
+    margin: auto;
+}
+
+
+label{
+    display: inline-block;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.txt-ali-c{
+    text-align: center;
+}
+
+label.txt-ali-c{
+    text-align: center;
+    padding-right: 7%;
+}
+
+
+input.txt-ali-c:focus{
+    text-align: left;
+}
+
+.con-ali-c{
+    /* align-items: center; */
+    align-content: center;
+}
+
+
+
+.input-group{
+    display: block;
+    text-align: center;
+}
+
+.input-group>label{
+    background-color: #fff;
+    display: inline-block;
+    padding: 0 3px;
+    margin: 2px, 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: #f84;
+    position: absolute;
+    cursor:text;
+    transform: translate(-190px, 6px);
+    transition: 0.15s;
+}
+
+.input-group>input[type="text"]:focus~label,
+.input-group>input[type="text"]:not(:placeholder-shown)~label{
+    color: #0080ff;
+    transform: translate(-190px, -7px);
+    font-size: 14px;
+}
+
+.input-group>input[type="text"]:not(:placeholder-shown){
+    border-color: #0080ff;
+}
