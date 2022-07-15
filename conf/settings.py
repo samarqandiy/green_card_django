@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'conf.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'defoult': env.dj_db_url('SALOM')
+    'default': env.dj_db_url('SALOM')
     # 'default': {
     #     # 'ENGINE': 'django.db.backends.sqlite3',
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
